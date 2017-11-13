@@ -1,0 +1,15 @@
+Grade Requirements:
+1. JOP's
+2. Executable JAR
+3. JOP, ask - do you want to encode, decode, or crack, or exit?
+4. For encoding, ask for the plain text message
+5. Ask for the key
+6. Display the encoded message
+7. Loop, ask - do you want to encode another message (y/n) (trap errors)
+Either go again, or a graceful exit. 
+
+Grade Checkpoints:
+```````````````````
+Grade Checkpoint #1: Encode
+Grade Checkpoint #2: Decode
+Grade Checkpoint #3: Cracking
