@@ -3,6 +3,7 @@ $(document).ready(function() {
 	$("#NameEmailForm").hide();
 	$("#results").hide();
 	$("#tableResults").hide();
+	$("#sql_picture").hide();
 
 	$("h1").click(function() {
 		$("#F14").hide();
@@ -10,20 +11,30 @@ $(document).ready(function() {
 		$("#results").hide();
 		$("#tableResults").hide();
 		$("h2").slideToggle(2000);
+
 	});
+
 	$("#showpicture").click(function() {
 		$("#F14").hide();
 		$("#NameEmailForm").hide();
 		$("#results").hide();
 		$("#tableResults").hide();
-		$("#F14").slideToggle(2000);
+		$("#F14").slideToggle(3000);
+	});
+	$("#sqlbutton").click(function() {
+		$("#F14").hide();
+		$("#NameEmailForm").hide();
+		$("#results").hide();
+		$("#tableResults").hide();
+		$("#sql_picture").hide();
+		$("#sql_picture").slideToggle(3000);
 	});
 	$("#formClick").click(function() {
 		$("#F14").hide();
 		$("#NameEmailForm").hide();
 		$("#results").hide();
 		$("#tableResults").hide();
-		$("#NameEmailForm").slideToggle(3000);
+		$("#NameEmailForm").show();
 	});
 	$("#results1").click(function() {
 		$("#F14").hide();

@@ -1,7 +1,7 @@
 <?php
 
 // connect to the database
-include 'connectDB.php';
+include 'DBconnect_4parm.php';
 //echo "working";
 // confirm that the 'id' variable has been set
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {

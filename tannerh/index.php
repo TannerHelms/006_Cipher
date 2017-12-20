@@ -109,6 +109,12 @@
 				<li>
 					<a id="results1" href="#about"><h5>Results</h5></a>
 				</li>
+				<li>
+					<a id="sqlbutton" href="#SQL"><h5>SQL</h5></a>
+				</li>
+				<li>
+					<a id="phpbutton" href="#PHP"><h5>PHP</h5></a>
+				</li>
 			</ul>
 
 			<hr>
@@ -137,55 +143,71 @@
 				</div>
 			</div>
 
-			<form id="NameEmailForm" action="php/DBaddRecords.php" method="post">
-				<p>
-					<h4 id="a3">First Name:</h4>
-					<input type="text" name="firstname">
-				</p>
-				<p>
-					<h4 id="a3">Last Name:</h4>
-					<input type="text" name="lastname">
-				</p>
-				<p>
-					<h4 id="a3">E-mail:</h4>
-					<input type="text" name="email">
-				</p>
 
-				<h4 id="a3">Which website are you commenting on (please enter end of URL e.g. mrm) </h4>
-				<br>
-				<input type="text" name="whichwebsite">
-				<br>
 
-				<h4 id="a3">Comment: </h4>
-				<br>
-				<textarea name="comment" rows = "10" cols="30">
-						The cat was playing in the garden
-					</textarea>
-				<br>
 
-				<input class="FormButton" type="submit">
-				<input class="FormButton" type="button" onclick="clearForm()" value="Clear form">
+
+<div id="sql_picture" class="w3-panel w3-green w3-display-container w3-animate-zoom">
+					<span onclick="w3_close3()"
+					class="w3-button w3-green w3-large w3-display-topright">&times;</span>
+					<h4>Important parts of developing a SQL Database</h4>
+
+					<p style="clear: both; text-align: center;">
+						<br>
+						The first thing to do in SQL is plan out your database, the most common way to do this is by using ERDs, or Entity-Relationship-Diagrams, like the ones below:
+					</p>
+
+					<p style="clear: both;">
+						<br>
+						<img src="images/wood1.jpg" style="float: left;" class="styled"/>
+					</p>
+
+			
+
+				</div>
+
+
+
+
+
+
+
+
+			<form id="NameEmailForm" action="php/DBaddRecords.php" method="post" class="w3-panel w3-green w3-display-container w3-animate-fading">
+				<h4 id="a3">First Name: </h4><input type="text" name="firstname">
+			<br>
+			<h4 id="a3">Last Name: </h4><input type="text" name="lastname">
+			<br>
+			<h4 id="a3">E-mail: </h4><input type="text" name="email">
+			<br>
+			<h4 id="a3">Website (Ex: tannerh): </h4><input type="text" name="website">
+			<br>
+			<h4 id="a3">Comments:</h4>
+			<textarea name="comments" rows="10" cols="30"></textarea>
+			<br>
+			<input type="submit">
 			</form>
+			
 
 			<div id="results">
-				<hr>
+				
 
 				<h3>Show SQL Select Results</h3>
 				<h4> <?php
-				include "php/connectDB.php";
 				include "php/DBechoShow.php";
-				include "php/DBclose.php";
-				?> </h4>
+			?>
+				</h4>
 			</div>
 			<div id="tableResults">
 
 				<h1>View Records (Intern Code Project)</h1>
 
 				<div class="RetriveDiv w3-blue-black">
-
+<h4 id="a3">
 					<?php
 					include 'php/DBRetriveTable.php';
 					?>
+				</h4>
 					<br>
 				</div>
 
@@ -207,6 +229,7 @@
 					document.getElementById("mySidebar").style.display = "none";
 				}
 			</script>
+			</div>
 	</body>
 
 </html>

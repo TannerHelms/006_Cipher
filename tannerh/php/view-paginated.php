@@ -10,7 +10,7 @@
 
 		<?php
 		// connect to the database
-		include ('connectDB');
+		include ('DBconnect_4parm.php');
 
 		// number of results to show per page
 		$per_page = 3;

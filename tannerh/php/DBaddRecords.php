@@ -31,7 +31,7 @@
 			<h1>Add Record</h1>
 		<h4><?php
 
-include 'connectDB.php';
+include 'DBconnect_4parm.php';
 
 $fname = $_POST["firstname"];
 echo "first name: "."$fname"."<br>";
@@ -42,8 +42,14 @@ echo "Last name: "."$lname"."<br>";
 $email = $_POST["email"];
 echo "email: "."$email"."<br>";
 
-$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-		VALUES ('$fname', '$lname', '$email')";
+$website = $_POST["website"];
+echo "website: ". "$website". "<br>";
+
+$comments = $_POST["comments"];
+echo "comments: ". "$comments". "<br>";
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email, website, comments)
+		VALUES ('$fname', '$lname', '$email', '$website', '$comments')";
 		
 if ($conn -> query($sql) === TRUE) {
 	echo "<br>New single record created successfully<br>";
