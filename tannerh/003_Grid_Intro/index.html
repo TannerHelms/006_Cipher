@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3 Grids by TannerH</title>
+		<style>
+			h1 {
+				color: blue;
+			}
+
+			.container {
+				display: grid;
+				grid-template-rows: 270px 620px 140px;
+				grid-template-columns: auto auto auto auto auto auto;
+				grid-gap: 10px;
+			}
+			.header {
+				grid-row: 1 /span 1;
+				grid-column: 1 /span 6;
+				background-color: #555555;
+			}
+			.sidebarleft {
+				grid-row: 2 /span 1;
+				grid-column: 1 /span 1;
+				background-color: #555555;
+			}
+			.main {
+				grid-row: 2 /span 1;
+				grid-column: 2 /span 4;
+				background-color: #555555;
+			}
+			.sidebarright {
+				grid-row: 2 /span 1;
+				grid-column: 6 /span 1;
+				background-color: #555555;
+			}
+			.footer {
+				grid-row: 3 /span 1;
+				grid-column: 1 /span 6;
+				background-color: #555555;
+			}
+		</style>
+		<style>
+			#snowflakeContainer {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+
+			.snowflake {
+				padding-left: 15px;
+				font-family: Cambria, Georgia, serif;
+				font-size: 14px;
+				line-height: 24px;
+				position: fixed;
+				color: #FFFFFF;
+				user-select: none;
+				z-index: 1000;
+			}
+			.snowflake:hover {
+				cursor: default;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="snowflakeContainer">
+			<p class="snowflake">
+				*
+			</p>
+		</div>
+		<div class="container">
+
+			<div class="header">
+				<h1>Header</h1>
+			</div>
+			<div class="main">
+				<h1>Main</h1>
+			</div>
+			<div class="sidebarleft">
+				<h1>Sidebar</h1>
+			</div>
+			<div class="sidebarright">
+				<h1>Sidebar</h1>
+			</div>
+			<div class="footer">
+				<h1>Footer</h1>
+			</div>
+
+		</div>
+	</body>
+	<script src="//www.kirupa.com/js/fallingsnow_v6.js"></script>
+	<script src="//www.kirupa.com/js/prefixfree.min.js"></script>
+</html>
